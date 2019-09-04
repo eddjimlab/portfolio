@@ -1,0 +1,36 @@
+{
+    "myItems": [{
+            "title": "Твой Новый Дом",
+            "url": "https://myhome.spb.ru",
+            "img": "item1.png",
+            "background": "#ac3b66",
+            "color": "white",
+            "desc1": "Сайт риэлтора, листинг объектов, блог, автопубликация в соц.сетях",
+            "desc2": "Word Press",
+            "desc3": "Scss, Gulp, PHP",
+            "desc4": "Разработка шаблона, адапитная верстка."
+        },
+        {
+            "title": "MyHome",
+            "url": "#",
+            "img": "item2.png",
+            "color": "White",
+            "background": "rgb(73, 170, 244)",
+            "desc1": "Сайт риэлтора",
+            "desc2": "Node js, express, MongoDb, ejs",
+            "desc3": "Passport, nodemailer",
+            "desc4": "Фронт и бэк энд разработка сайта, адаптивная верстка"
+        },
+        {
+            "title": "O-ZONE",
+            "url": "#",
+            "img": "item3.png",
+            "color": "White",
+            "background": "#005bff",
+            "desc1": "Проект интернет магазина",
+            "desc2": "Js, Fetch API",
+            "desc3": "Webpack",
+            "desc4": "Фронт и бэк энд разработка сайта"
+        }
+    ]
+}

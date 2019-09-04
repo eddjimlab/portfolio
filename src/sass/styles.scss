@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after {
+  
+  box-sizing: border-box;
+  font: 10px 'Arimo', sans-serif;
+  margin: 0;
+}
+
+// @import "~bootstrap/scss/bootstrap";
+
+@import url('https://fonts.googleapis.com/css?family=Arimo:400,700&display=swap&subset=cyrillic');
+
+@import "media";
+@import "front";
+
+h1 {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  text-align: center;
+}
+
+.col-large {
+  flex: 8;
+}
+
+.col-small {
+  flex: 4;
+  padding: 0 2rem;
+}
+
+.item {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+
+  &_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h2 {
+      font-size: 3vw;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      align-self: flex-start;
+    }
+
+    p {
+      align-self: flex-start;
+      font-size: 1.5vw;
+      opacity: .8;
+    }
+
+    &_image {
+      max-width: 90%;
+    }
+
+    &_list {
+      // padding-inline-start: 0px;
+      // list-style: none;
+      align-self: flex-start;
+
+      li {
+        font-size: 1.5vw;
+        line-height: 6vh;
+      }
+
+      &_url {
+        margin-top: 2vh;
+        font-size: 1.5vw;
+        align-self: flex-start;
+        text-decoration: none;
+        &::after{
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1.5px;
+          background-color: white;
+          transform-origin: left;
+          transform: translateY(.2rem) scale(0);
+          transition: all .5s ease;
+        }
+        &:hover{
+          &::after{
+            transform: translateY(.2rem)  scale(1);
+          }
+        }
+      }
+
+    }
+
+  }
+}

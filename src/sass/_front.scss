@@ -1,0 +1,62 @@
+.front {
+    background-image: linear-gradient(rgba(15, 6, 28, 0.7)),
+        url(../image/front1.JPG);
+    // background: rgba(213, 0, 249, 0.11);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.nav {
+    &_menu {
+        display: flex;
+        justify-content: flex-end;
+
+        &_item {
+            margin-right: 3vw;
+            margin-top: 2vh;
+            text-transform: uppercase;
+            list-style: none;
+            a {
+                color: silver;
+                font-size: 1.5vw;
+                text-decoration: none;
+                transition: all .5s;
+                &:hover{
+                    color: white;
+                }
+                &:active{
+                    color: white;
+                }
+            }
+        }
+
+        &_item.logo {
+            margin-right: auto;
+            color: silver;
+        }
+    }
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70vh;
+text-transform: uppercase;
+    align-content: center;
+//    min-height: 100vh;
+    &_header{
+        color: silver;
+        font-size: 3vw;
+        align-self: center;
+        
+    }
+    &_content{
+        color: white;
+        font-size: 1.1vw;
+        align-self: center;
+        max-width: 50%;
+        text-align: center;
+        letter-spacing: 1vh;
+    }
+}
