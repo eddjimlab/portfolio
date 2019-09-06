@@ -7,7 +7,9 @@
         <meta name="viewport"
             content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
         <title>Webpack starter</title>
-
+<script src="about.js"></script>
+<script src="contact.js"></script>
+<script src="home.js"></script>
 
     </head>
 
@@ -24,13 +26,20 @@
             <section class="main">
                 <h1 class="main_header">Сайт-Портфолио Разработчика</h1>
                 <p class="main_content">Разработка сайтов с нуля/ Доработка готовых сайтов / Адаптация под Word Press /SEO оптимизация сайтов / Продвижение сайтов</p>
+                <form action="">
+                    <button onclick="getItems()" type="submit" class="main_btn">Мои работы</button>
+                </form>
             </section>
         </section>
-
     </body>
     <script>
 
     </script>
-
+<script id="entry-template" type="text/x-handlebars-template">
+    <div class="entry">
+    <h1>{{title}}</h1>
+    
+  </div>
+</script>
 
 </html>

@@ -73,19 +73,24 @@ h1 {
         font-size: 1.5vw;
         align-self: flex-start;
         text-decoration: none;
+        position: relative;
         &::after{
           content: '';
-          display: block;
-          width: 100%;
-          height: 1.5px;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 0%;
+          height: 2px;
           background-color: white;
-          transform-origin: left;
-          transform: translateY(.2rem) scale(0);
-          transition: all .5s ease;
+          transition: .3s;
+          transform: translateY(.1rem);
+          // transform: scaleX(0);
         }
         &:hover{
           &::after{
-            transform: translateY(.2rem)  scale(1);
+            width: 100%;
+            left: 0;
+            // transform: scaleX(1);
           }
         }
       }

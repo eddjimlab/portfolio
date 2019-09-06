@@ -5,11 +5,11 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
+
 const isDevelopment = argv.mode === "development";
 const isProduction = !isDevelopment;
 const distPath = path.join(__dirname, "/public");
 const merge = require("webpack-merge");
-const configEjs = require("./ejs.cofig");
 
 const config = merge([{
   entry: {
@@ -82,6 +82,11 @@ const config = merge([{
             name: "fonts/[name][hash].[ext]"
           }
         }
+      },
+      {
+        test: /\.hbs$/,
+        loader: "handlebars-loader",
+        exclude: /(node_modules|bower_components)/
       }
     ]
   },
@@ -99,7 +104,8 @@ const config = merge([{
   ],
   resolve: {
     alias: {
-      vue$: "vue/dist/vue.esm.js"
+      vue$: "vue/dist/vue.esm.js",
+      handlebars: 'handlebars/dist/handlebars.min.js'
     }
   },
   optimization: isProduction
@@ -123,8 +129,7 @@ const config = merge([{
     compress: true,
     open: true
   }
-},
-configEjs(),
+}
 ]);
 
 module.exports = config;

@@ -7,13 +7,14 @@ import "./../sass/styles.scss";
 import Db from "../db/db.json";
 
 import importPhoto from "./importPhoto";
+import { once } from "events";
 
 const getItems = () => {
   const images = importPhoto(
     require.context("../image/", false, /\.(png|jpe?g|svg)$/)
-    );
-    let img = "";
-    let itemBackground = "";
+  );
+  let img = "";
+  let itemBackground = "";
   // element.classList.add("item");
   Db.myItems.forEach(item => {
     img = item.img;
@@ -41,6 +42,24 @@ const getItems = () => {
     document.body.append(element);
   });
 };
-getItems();
+// getItems();
 
 
+
+
+
+import template from './main.hbs';
+
+
+// div.innerHTML = template({
+//   name: "John",
+//   age: 53
+// });
+// document.body.append(div);
+
+// import Handlebars from 'handlebars';
+
+// let source = document.querySelector('#entry-template');
+// let template = Handlebars.compile(source);
+// let context = { title: "Sobaka kachalova" };
+// let html = template(context);
